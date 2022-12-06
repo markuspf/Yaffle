@@ -9,6 +9,7 @@ modules
 
     -- The core type theory and support
     Core.Binary,
+    Core.Binary.Prims,
     Core.Case.Builder,
     Core.Case.Patterns,
     Core.Case.Util,
@@ -22,7 +23,10 @@ modules
     Core.Context.CtxtData,
     Core.Context.Data,
     Core.Context.Def, -- top level definition forms live here
+    Core.Context.Log,
+    Core.Coverage,
     Core.Error,
+    Core.Env,
     Core.Evaluate,
     Core.Evaluate.Builtins,
     Core.Evaluate.Compile,
@@ -32,8 +36,11 @@ modules
     Core.Evaluate.ToScheme,
     Core.Evaluate.Value,
     Core.FC,
+    Core.Hash,
     Core.InitPrimitives,
+    Core.Metadata,
     Core.Options,
+    Core.Options.Log,
     Core.Primitives,
     Core.Syntax.Decls, -- adding raw declarations to the context
     Core.Syntax.Lexer,
@@ -56,6 +63,7 @@ modules
 
     -- The language of TT with implicits
     TTImp.BindImplicits,
+    TTImp.Elab.As,
     TTImp.Impossible,
     TTImp.ProcessBuiltin,
     TTImp.ProcessData,
@@ -105,8 +113,9 @@ modules
     Parser.Support,
     Parser.Unlit,
 
-
     Protocol.Hex,
+    Protocol.IDE.Decoration,
+    Protocol.SExp,
 
     -- Things we'd expect in a base library, but since this project is the
     -- core of everything, include them here for bootstrapping.
